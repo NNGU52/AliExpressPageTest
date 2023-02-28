@@ -2,6 +2,7 @@ using NUnit.Framework;
 using RA;
 using RestAssured;
 using ClassLibrary1;
+using ClassLibrary2;
 using RestSharp;
 using System;
 using System.Text.RegularExpressions;
@@ -16,8 +17,8 @@ namespace TwoApiTest
         [Test]
         public void Test1()
         {
-            var library = new Class1();
-            var response = library.GetUsers();
+            var library1 = new Class1();
+            var response = library1.GetUsers();
 
             // проверка, на то, что имена файлов-аватаров пользователей совпадают
             for (int i = 0; i < response.data.Count; i++)
@@ -32,6 +33,13 @@ namespace TwoApiTest
             {
                 Assert.IsTrue(response.data[i].email.EndsWith("reqres.in"));
             }
+        }
+
+        [Test]
+        public void Test2()
+        {
+            var library2 = new Class2();
+            library2.name();
         }
     }
 }

@@ -14,6 +14,16 @@
         "net45": {}
       }
     },
+    "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary2\\ClassLibrary2.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary2\\ClassLibrary2.csproj",
+        "projectName": "ClassLibrary2",
+        "projectPath": "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary2\\ClassLibrary2.csproj"
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
     "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\TwoApiTest\\TwoApiTest.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -40,6 +50,9 @@
             "projectReferences": {
               "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary1\\ClassLibrary1.csproj": {
                 "projectPath": "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary1\\ClassLibrary1.csproj"
+              },
+              "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary2\\ClassLibrary2.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary2\\ClassLibrary2.csproj"
               }
             }
           }
