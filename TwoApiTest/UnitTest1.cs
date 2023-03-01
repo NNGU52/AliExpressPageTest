@@ -39,7 +39,22 @@ namespace TwoApiTest
         public void Test2()
         {
             var library2 = new Class2();
-            library2.name();
+            var response = library2.SuccessfulResultRegistration();
+
+            Assert.NotNull(response.id, "NULL");
+            Assert.NotNull(response.token, "NULL");
+
+            Assert.AreEqual(library2.id, response.id, "Error registration");
+            Assert.AreEqual(library2.token, response.token, "Error registration");
+        }
+
+        [Test]
+        public void Test3()
+        {
+            var library2 = new Class2();
+            var response = library2.UnSuccessfulRegistration();
+
+            Assert.AreEqual("Missing password", response.Error, "Error");
         }
     }
 }

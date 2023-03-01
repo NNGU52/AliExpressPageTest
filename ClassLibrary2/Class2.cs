@@ -10,20 +10,37 @@ namespace ClassLibrary2
 {
     public class Class2
     {
-        private int id = 4;
-        private string token = "QpwL5tke4Pnpja7X4";
+        public  int id = 4;
+        public string token = "QpwL5tke4Pnpja7X4";
 
-        public void name()
+        public SuccessfulRegistration SuccessfulResultRegistration()
         {
             RestClient client = new RestClient("https://reqres.in/");
 
             RestRequest request = new RestRequest("api/register", Method.POST);
             Registration reg = new Registration("eve.holt@reqres.in", "pistol");
-            //request.RequestFormat = DataFormat.Json;
             request.AddJsonBody(reg);
 
             IRestResponse response = client.Post(request);
-            Console.WriteLine(response);
+            var content = response.Content;
+            var resultRegistration = JsonConvert.DeserializeObject<SuccessfulRegistration>(content);
+
+            return resultRegistration;
+        }
+
+        public UnSuccessfulRegistration UnSuccessfulRegistration()
+        {
+            RestClient client = new RestClient("https://reqres.in/");
+
+            RestRequest request = new RestRequest("api/register", Method.POST);
+            Registration reg = new Registration("sydney@fife", "");
+            request.AddJsonBody(reg);
+
+            IRestResponse response = client.Post(request);
+            var content = response.Content;
+            var resultRegistration = JsonConvert.DeserializeObject<UnSuccessfulRegistration>(content);
+
+            return resultRegistration;
         }
     }
 }
