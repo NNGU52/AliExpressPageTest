@@ -6,6 +6,9 @@ using ClassLibrary2;
 using RestSharp;
 using System;
 using System.Text.RegularExpressions;
+using ClassLibrary3;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace TwoApiTest
 {
@@ -55,6 +58,16 @@ namespace TwoApiTest
             var response = library2.UnSuccessfulRegistration();
 
             Assert.AreEqual("Missing password", response.Error, "Error");
+        }
+
+        [Test]
+        public void Test4()
+        {
+            var library3 = new Class3();
+            var response = library3.Years();
+            var expectedSortDate = response.OrderBy(x => x);
+
+            Assert.IsTrue(expectedSortDate.SequenceEqual(response), "The sort years is wrong");
         }
     }
 }

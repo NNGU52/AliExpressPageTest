@@ -110,3 +110,5 @@ C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\obj\Deb
 C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\obj\Debug\net5.0\TwoApiTest.genruntimeconfig.cache
 C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary2.dll
 C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary2.pdb
+C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary3.dll
+C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary3.pdb

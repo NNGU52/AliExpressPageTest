@@ -15,8 +15,6 @@ namespace ClassLibrary1
             RestClient client = new RestClient("https://reqres.in/");
 
             RestRequest request = new RestRequest("/api/users?page=2", Method.GET);
-            //request.AddHeader("Accept", "application/json");
-            //request.RequestFormat = DataFormat.Json;
             IRestResponse response = client.Execute(request);
             var content = response.Content;
             Console.WriteLine(content);
