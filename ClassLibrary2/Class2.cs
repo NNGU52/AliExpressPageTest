@@ -12,6 +12,10 @@ namespace ClassLibrary2
     {
         public  int id = 4;
         public string token = "QpwL5tke4Pnpja7X4";
+        public int expectedCodeSuccessful = 200;
+        public int expectedCodeUnSuccessful = 400;
+        public int statusCodeIntSuccessful;
+        public int statusCodeIntUnSuccessful;
 
         public SuccessfulRegistration SuccessfulResultRegistration()
         {
@@ -23,6 +27,8 @@ namespace ClassLibrary2
 
             IRestResponse response = client.Post(request);
             var content = response.Content;
+            var statusCodeString = response.StatusCode.ToString();
+            var statusCodeIntSuccessful = (int)response.StatusCode;
             var resultRegistration = JsonConvert.DeserializeObject<SuccessfulRegistration>(content);
 
             return resultRegistration;
@@ -38,6 +44,8 @@ namespace ClassLibrary2
 
             IRestResponse response = client.Post(request);
             var content = response.Content;
+            var statusCodeString = response.StatusCode.ToString();
+            var statusCodeIntUnSuccessful = (int)response.StatusCode;
             var resultRegistration = JsonConvert.DeserializeObject<UnSuccessfulRegistration>(content);
 
             return resultRegistration;

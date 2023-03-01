@@ -1206,6 +1206,15 @@
         "runtime": {
           "bin/placeholder/ClassLibrary3.dll": {}
         }
+      },
+      "ClassLibrary4/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/ClassLibrary4.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary4.dll": {}
+        }
       }
     }
   },
@@ -4422,6 +4431,11 @@
       "type": "project",
       "path": "../ClassLibrary3/ClassLibrary3.csproj",
       "msbuildProject": "../ClassLibrary3/ClassLibrary3.csproj"
+    },
+    "ClassLibrary4/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary4/ClassLibrary4.csproj",
+      "msbuildProject": "../ClassLibrary4/ClassLibrary4.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4429,6 +4443,7 @@
       "ClassLibrary1 >= 1.0.0",
       "ClassLibrary2 >= 1.0.0",
       "ClassLibrary3 >= 1.0.0",
+      "ClassLibrary4 >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1",
@@ -4472,6 +4487,9 @@
             },
             "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary3\\ClassLibrary3.csproj": {
               "projectPath": "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary3\\ClassLibrary3.csproj"
+            },
+            "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary4\\ClassLibrary4.csproj": {
+              "projectPath": "C:\\Users\\Acer\\Documents\\Visual Studio 2019\\Project\\TwoApiTest\\ClassLibrary4\\ClassLibrary4.csproj"
             }
           }
         }

@@ -10,6 +10,9 @@ namespace ClassLibrary3
 {
     public class Class3
     {
+        public int statusCodeInt;
+        public int expectedCodeInt = 200;
+
         public List<int> Years()
         {
             RestClient client = new RestClient("https://reqres.in/");
@@ -17,6 +20,8 @@ namespace ClassLibrary3
             RestRequest request = new RestRequest("api/unknown", Method.GET);
             IRestResponse response = client.Execute(request);
             var content = response.Content;
+            var statusCodeString = response.StatusCode.ToString();
+            var statusCodeInt = (int)response.StatusCode;
             var users = JsonConvert.DeserializeObject<ListResource>(content);
             List<int> years = new List<int>();
 

@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using ClassLibrary3;
 using System.Linq;
 using System.Collections.Generic;
+using ClassLibrary4;
 
 namespace TwoApiTest
 {
@@ -22,6 +23,8 @@ namespace TwoApiTest
         {
             var library1 = new Class1();
             var response = library1.GetUsers();
+
+            Assert.AreEqual(library1.expectedCodeInt, library1.statusCodeInt, "Error statusCode");
 
             // проверка, на то, что имена файлов-аватаров пользователей совпадают
             for (int i = 0; i < response.data.Count; i++)
@@ -44,6 +47,8 @@ namespace TwoApiTest
             var library2 = new Class2();
             var response = library2.SuccessfulResultRegistration();
 
+            Assert.AreEqual(library2.expectedCodeSuccessful, library2.statusCodeIntSuccessful, "Error statusCode");
+
             Assert.NotNull(response.id, "NULL");
             Assert.NotNull(response.token, "NULL");
 
@@ -57,6 +62,7 @@ namespace TwoApiTest
             var library2 = new Class2();
             var response = library2.UnSuccessfulRegistration();
 
+            Assert.AreEqual(library2.expectedCodeUnSuccessful, library2.statusCodeIntUnSuccessful, "Error statusCode");
             Assert.AreEqual("Missing password", response.Error, "Error");
         }
 
@@ -67,7 +73,17 @@ namespace TwoApiTest
             var response = library3.Years();
             var expectedSortDate = response.OrderBy(x => x);
 
+            Assert.AreEqual(library3.expectedCodeInt, library3.statusCodeInt, "Error statusCode");
             Assert.IsTrue(expectedSortDate.SequenceEqual(response), "The sort years is wrong");
+
+        }
+
+        [Test]
+        public void Test5()
+        {
+            var library4 = new Class4();
+            var response = library4.DeleteMethod();
+            Assert.AreEqual(library4.expectedCodeInt, response, "Error statusCode");
         }
     }
 }
