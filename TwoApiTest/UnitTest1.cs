@@ -18,8 +18,13 @@ namespace TwoApiTest
 
     public class Tests
     {
+        /*
+         * Используя сервис http://reqres.in/, получить список пользователей со второй страницы;
+         * Убедиться, что имена файлов-аватаров пользователей совпадают;
+         * Убедиться, что email пользователей имеет окончание reqres.in;
+         */
 
-        [Test]
+        [TestCase]
         public void Test1()
         {
             var library1 = new Class1();
@@ -27,7 +32,6 @@ namespace TwoApiTest
 
             Assert.AreEqual(library1.expectedCodeInt, library1.statusCodeInt, "Error statusCode");
 
-            // проверка, на то, что имена файлов-аватаров пользователей совпадают
             for (int i = 0; i < response.data.Count; i++)
             {
                 // проверка, с использованием ренгулярного выражения
@@ -42,7 +46,15 @@ namespace TwoApiTest
             }
         }
 
-        [Test]
+        /*
+         * Используя сервис http://reqres.in/, протестировать регистрацию поьзователя в системе;
+         * Необходимо создание 2 тестов:
+         * - успешная регистрация;
+         * - регистрация с ошиибкой из-за отсутствия пароля;
+         * - проверить коды ошибок;
+         */
+
+        [TestCase]
         public void Test2()
         {
             var library2 = new Class2();
@@ -57,7 +69,7 @@ namespace TwoApiTest
             Assert.AreEqual(library2.token, response.token, "Error registration");
         }
 
-        [Test]
+        [TestCase]
         public void Test3()
         {
             var library2 = new Class2();
@@ -67,7 +79,11 @@ namespace TwoApiTest
             Assert.AreEqual("Missing password", response.Error, "Error");
         }
 
-        [Test]
+        /*
+         * Используя сервис http://reqres.in/, убедиться, что операция LIST<RESOURCE> возвращает данные, отсортированные по годам;
+         */
+
+        [TestCase]
         public void Test4()
         {
             var library3 = new Class3();
@@ -78,7 +94,11 @@ namespace TwoApiTest
             Assert.IsTrue(expectedSortDate.SequenceEqual(response), "The sort years is wrong");
         }
 
-        [Test]
+        /*
+        * Используя сервис http://reqres.in/, попробовать удалить второго пользователя и сравнить статус-код;
+        */
+
+        [TestCase]
         public void Test5()
         {
             var library4 = new Class4();
@@ -86,7 +106,11 @@ namespace TwoApiTest
             Assert.AreEqual(library4.expectedCodeInt, response, "Error statusCode");
         }
 
-        [Test]
+        /*
+        * Используя сервис http://reqres.in/, обновить информацию о пользователе и сравнить дату обновления с текущей датой на машине;
+        */
+
+        [TestCase]
         public void Test6()
         {
             var library5 = new Class5();

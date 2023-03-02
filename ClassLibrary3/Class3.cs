@@ -21,7 +21,7 @@ namespace ClassLibrary3
             IRestResponse response = client.Execute(request);
             var content = response.Content;
             var statusCodeString = response.StatusCode.ToString();
-            var statusCodeInt = (int)response.StatusCode;
+            statusCodeInt = (int)response.StatusCode;
             var users = JsonConvert.DeserializeObject<ListResource>(content);
             List<int> years = new List<int>();
 

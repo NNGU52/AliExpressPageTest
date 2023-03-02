@@ -22,7 +22,7 @@ namespace ClassLibrary1
             var content = response.Content;
             Console.WriteLine(content);
             var statusCodeString = response.StatusCode.ToString();
-            var statusCodeInt = (int)response.StatusCode;
+            statusCodeInt = (int)response.StatusCode;
             var users = JsonConvert.DeserializeObject<ListsOfUsers>(content);
 
             // вывод в консоль всех пользователей

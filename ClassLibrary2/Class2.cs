@@ -28,7 +28,7 @@ namespace ClassLibrary2
             IRestResponse response = client.Post(request);
             var content = response.Content;
             var statusCodeString = response.StatusCode.ToString();
-            var statusCodeIntSuccessful = (int)response.StatusCode;
+            statusCodeIntSuccessful = (int)response.StatusCode;
             var resultRegistration = JsonConvert.DeserializeObject<SuccessfulRegistration>(content);
 
             return resultRegistration;
@@ -45,7 +45,7 @@ namespace ClassLibrary2
             IRestResponse response = client.Post(request);
             var content = response.Content;
             var statusCodeString = response.StatusCode.ToString();
-            var statusCodeIntUnSuccessful = (int)response.StatusCode;
+            statusCodeIntUnSuccessful = (int)response.StatusCode;
             var resultRegistration = JsonConvert.DeserializeObject<UnSuccessfulRegistration>(content);
 
             return resultRegistration;
