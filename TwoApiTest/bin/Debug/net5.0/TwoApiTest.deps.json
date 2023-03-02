@@ -12,6 +12,7 @@
           "ClassLibrary2": "1.0.0",
           "ClassLibrary3": "1.0.0",
           "ClassLibrary4": "1.0.0",
+          "ClassLibrary5": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "NUnit": "3.12.0",
           "NUnit3TestAdapter": "3.16.1",
@@ -852,6 +853,11 @@
         "runtime": {
           "ClassLibrary4.dll": {}
         }
+      },
+      "ClassLibrary5/1.0.0": {
+        "runtime": {
+          "ClassLibrary5.dll": {}
+        }
       }
     }
   },
@@ -1360,6 +1366,11 @@
       "sha512": ""
     },
     "ClassLibrary4/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClassLibrary5/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

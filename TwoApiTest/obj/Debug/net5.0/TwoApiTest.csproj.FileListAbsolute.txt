@@ -114,3 +114,5 @@ C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Deb
 C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary3.pdb
 C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary4.dll
 C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary4.pdb
+C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary5.dll
+C:\Users\Acer\Documents\Visual Studio 2019\Project\TwoApiTest\TwoApiTest\bin\Debug\net5.0\ClassLibrary5.pdb

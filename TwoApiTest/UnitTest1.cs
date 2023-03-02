@@ -10,6 +10,7 @@ using ClassLibrary3;
 using System.Linq;
 using System.Collections.Generic;
 using ClassLibrary4;
+using ClassLibrary5;
 
 namespace TwoApiTest
 {
@@ -75,7 +76,6 @@ namespace TwoApiTest
 
             Assert.AreEqual(library3.expectedCodeInt, library3.statusCodeInt, "Error statusCode");
             Assert.IsTrue(expectedSortDate.SequenceEqual(response), "The sort years is wrong");
-
         }
 
         [Test]
@@ -84,6 +84,17 @@ namespace TwoApiTest
             var library4 = new Class4();
             var response = library4.DeleteMethod();
             Assert.AreEqual(library4.expectedCodeInt, response, "Error statusCode");
+        }
+
+        [Test]
+        public void Test6()
+        {
+            var library5 = new Class5();
+            string dateUpdate = library5.PutMethod();
+            DateTimeOffset dateToday = DateTime.Today;
+            string s = Regex.Replace(dateToday.ToString(), @"\s\d:\d{2}:\d{2}\s\+\d{2}:\d{2}", "");
+
+            Assert.AreEqual(s, dateUpdate, "Error");
         }
     }
 }
