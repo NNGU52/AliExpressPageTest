@@ -11,14 +11,8 @@ namespace ClassLibrary5
 {
     public class Class5
     {
-        public string PutMethod()
+        public string Put(IRestResponse response)
         {
-            RestClient client = new RestClient("https://reqres.in/");
-            RestRequest request = new RestRequest("/api/users/2", Method.PUT);
-            UpdateDate updateDate = new UpdateDate("morpheus", "zion resident");
-            request.AddJsonBody(updateDate);
-
-            IRestResponse response = client.Execute(request);
             var content = response.Content;
             var updateDateNoJson = JsonConvert.DeserializeObject<ResultUpdateDate>(content);
 

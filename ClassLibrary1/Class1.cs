@@ -8,21 +8,13 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class Class1
+    public class Class1 
     {
-        public int expectedCodeInt = 200;
-        public int statusCodeInt;
 
-        public ListsOfUsers GetUsers()
+        public ListsOfUsers GetUsers(IRestResponse response)
         {
-            RestClient client = new RestClient("https://reqres.in/");
-
-            RestRequest request = new RestRequest("/api/users?page=2", Method.GET);
-            IRestResponse response = client.Execute(request);
             var content = response.Content;
             Console.WriteLine(content);
-            var statusCodeString = response.StatusCode.ToString();
-            statusCodeInt = (int)response.StatusCode;
             var users = JsonConvert.DeserializeObject<ListsOfUsers>(content);
 
             // вывод в консоль всех пользователей
